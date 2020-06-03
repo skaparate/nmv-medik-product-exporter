@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Root path to the plugin.
  */
-define( 'NMV_MEDIKPE_ROOT', plugins_dir( __FILE__ ) );
+define( 'NMV_MEDIKPE_ROOT', plugin_dir_path( __FILE__ ) );
 
 /**
  * The column name on the exported data.
@@ -36,7 +36,7 @@ function nmvpe_run() {
         $importer = new Importer();
         add_filter(
             'woocommerce_csv_product_import_mapping_options',
-            array( $importer, 'add_columns'
+            array( $importer, 'add_columns' )
         );
         add_filter(
             'woocommerce_csv_product_import_mapping_default_columns',
